@@ -1,10 +1,11 @@
 const express = require("express");
 
+// routes
+const userRouter = require("./routes/userRoutes");
+
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("<h1>Hello from server</h1>");
-});
+app.use(userRouter);
 
 app.listen(8000, () => {
   console.log("Server is running on port 8000");
