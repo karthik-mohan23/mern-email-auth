@@ -1,6 +1,5 @@
 const createUser = (req, res) => {
-  res.send("<h1>Hello from server</h1>");
+  res.json({ user: req.body });
 };
 
-
-module.exports = {createUser}
+module.exports = { createUser };
